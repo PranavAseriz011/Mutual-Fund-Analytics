@@ -1,0 +1,25 @@
+MUTUAL FUND ANALYTICS — DAY 1 DATA QUALITY SUMMARY
+
+1. Fund Master
+- Total rows: 40
+- Columns: 15
+- Unique AMFI scheme codes: 40
+
+2. NAV History
+- Unique AMFI scheme codes: 40
+- Missing fund master codes: 0
+
+3. AMFI Code Validation
+- All 40 fund master scheme codes were found in NAV history.
+- Validation status: PASSED
+
+4. Fund Master Exploration
+- Fund houses: 10
+- Categories: Equity, Debt
+- Subcategories: 12 unique values
+- Risk categories: 5 unique values
+- SEBI category codes: 9 unique values
+
+5. Conclusion
+The AMFI scheme-code validation passed with no missing codes.
+This report summarizes the checks completed so far.
