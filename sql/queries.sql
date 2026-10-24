@@ -3,18 +3,16 @@
 -- Database: bluestock_mf.db
 -- ============================================================
 
--- 1. Top 5 fund houses by latest available AUM
+-- 1. Top 5 funds by AUM
 SELECT
-fund_house,
-aum_crore,
-num_schemes,
-date_key
-FROM fact_aum
-WHERE date_key = (
-SELECT MAX(date_key)
-FROM fact_aum
-)
-ORDER BY aum_crore DESC
+    f.scheme_name,
+    f.fund_house,
+    p.aum_crore
+FROM fact_performance p
+JOIN dim_fund f
+    ON p.fund_key = f.fund_key
+WHERE p.aum_crore IS NOT NULL
+ORDER BY p.aum_crore DESC
 LIMIT 5;
 
 
