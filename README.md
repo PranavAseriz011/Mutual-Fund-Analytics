@@ -28,35 +28,77 @@ The project transforms raw mutual fund datasets into structured, analysis-ready 
 ## 📁 Project Structure
 
 ```text
+
 Mutual-Fund-Analytics/
 │
-├── data/
-│   ├── raw/                  # Original datasets
-│   └── processed/            # Cleaned datasets
+├── .venv/                              # Python virtual environment (not for submission)
 │
-├── notebooks/                # Data exploration and cleaning notebooks
+├── dashboard/                          # Dashboard development
+│
+├── data/
+│   ├── raw/                            # Original datasets and NAV files
+│   │   ├── 01_fund_master.csv
+│   │   ├── 02_nav_history.csv
+│   │   ├── 03_aum_by_fund_house.csv
+│   │   ├── 04_monthly_sip_inflows.csv
+│   │   ├── 05_category_inflows.csv
+│   │   ├── 06_industry_folio_count.csv
+│   │   ├── 07_scheme_performance.csv
+│   │   ├── 08_investor_transactions.csv
+│   │   ├── 09_portfolio_holdings.csv
+│   │   ├── 10_benchmark_indices.csv
+│   │   ├── Axis_Bluechip_nav.csv
+│   │   ├── HDFC_Top_100_Direct_nav.csv
+│   │   ├── ICICI_Bluechip_nav.csv
+│   │   ├── Kotak_Bluechip_nav.csv
+│   │   ├── Nippon_Large_Cap_nav.csv
+│   │   └── SBI_Bluechip_nav.csv
+│   │
+│   └── processed/                      # Cleaned datasets
+│       ├── cleaned_aum_by_fund_house.csv
+│       ├── cleaned_benchmark_indices.csv
+│       ├── cleaned_category_inflows.csv
+│       ├── cleaned_fund_master.csv
+│       ├── cleaned_industry_folio_count.csv
+│       ├── cleaned_investor_transactions.csv
+│       ├── cleaned_monthly_sip_inflows.csv
+│       ├── cleaned_nav_history.csv
+│       ├── cleaned_portfolio_holdings.csv
+│       └── cleaned_scheme_performance.csv
+│
+├── notebooks/                          # Data cleaning and exploration
+│   ├── 01_clean_fund_master.ipynb
+│   ├── 02_clean_nav_history.ipynb
+│   ├── 03_clean_aum_by_fund_house.ipynb
+│   ├── 04_clean_monthly_sip_inflows.ipynb
+│   ├── 05_clean_category_inflows.ipynb
+│   ├── 06_clean_industry_folio_count.ipynb
+│   ├── 07_clean_scheme_performance.ipynb
+│   ├── 08_clean_investor_transactions.ipynb
+│   ├── 09_clean_portfolio_holdings.ipynb
+│   └── 10_clean_benchmark_indices.ipynb
+│
+├── reports/
+│   └── data_quality_summary.txt
 │
 ├── sql/
-│   ├── schema.sql            # Database schema definitions
-│   └── queries.sql           # Analytical SQL queries
+│   ├── schema.sql                      # Star-schema definitions
+│   └── queries.sql                     # 10 analytical SQL queries
 │
-├── dashboard/                # Dashboard development
-├── reports/                  # Project reports and documentation
-│
-├── data_ingestion.py         # Dataset ingestion and inspection
-├── explore_fund_master.py    # Fund master exploration
-├── live_nav_fetch.py         # NAV data retrieval
-├── validate_amfi_codes.py    # AMFI scheme-code validation
-├── load_to_sqlite.py         # Load datasets into SQLite
-├── load_star_schema.py       # Populate star-schema tables
-├── verify_database.py        # Database verification
-├── run_queries.py            # Execute analytical SQL queries
-│
-├── data_dictionary.md        # Dataset and schema documentation
-├── bluestock_mf.db           # SQLite database
-├── requirements.txt          # Python dependencies
-├── README.md
-└── .gitignore
+├── .gitignore
+├── bluestock_mf.db                     # SQLite analytical database
+├── data_dictionary.md                  # Dataset and schema documentation
+├── data_ingestion.py                   # Dataset ingestion and inspection
+├── explore_fund_master.py              # Fund master exploration
+├── live_nav_fetch.py                   # NAV data retrieval
+├── load_star_schema.py                 # Star-schema loading
+├── load_to_sqlite.py                   # Dataset loading into SQLite
+├── README.md                           # Project documentation
+├── requirements.txt                    # Python dependencies
+├── run_queries.py                      # Execute analytical SQL queries
+├── validate_amfi_codes.py              # AMFI scheme-code validation
+└── verify_database.py                  # Database verification
+
 ```
 
 ## 📅 Day 1 — Project Setup and Data Ingestion
