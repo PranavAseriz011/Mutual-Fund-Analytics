@@ -61,11 +61,11 @@ Mutual-Fund-Analytics/
 
 ## 📅 Day 1 — Project Setup and Data Ingestion
 
-**Status: Completed ✅**
+### Status: Completed ✅
 
 The first phase focused on setting up the project environment, inspecting the provided datasets, retrieving NAV data, and validating scheme-code coverage.
 
-### Tasks Completed
+### Day 1 Tasks Completed
 
 * Created the project directory structure.
 * Installed the required Python dependencies and created `requirements.txt`.
@@ -94,11 +94,11 @@ The first phase focused on setting up the project environment, inspecting the pr
 
 ## 📅 Day 2 — Data Cleaning and SQL Database Design
 
-**Status: Completed ✅**
+Status: Completed ✅
 
 The second phase focused on preparing cleaned datasets, building the SQLite database, implementing a star schema, and executing analytical SQL queries.
 
-### Tasks Completed
+### Day 2 Tasks Completed
 
 * Created 10 cleaned CSV datasets in `data/processed/`.
 * Developed a data dictionary documenting datasets, columns, and database tables.
